@@ -20,3 +20,12 @@ Este projeto utiliza Transfer Learning com a arquitetura VGG19 para classificar 
    ```python
    from google.colab import drive
    drive.mount('/content/drive')
+modelo.fit(
+    gerador_treinamento,
+    steps_per_epoch=gerador_treinamento.samples // tamanho_lote,
+    epochs=epocas,
+    validation_data=gerador_teste,
+    validation_steps=gerador_teste.samples // tamanho_lote
+)
+modelo = load_model('modelo_cancer_mama_vgg19.keras')
+predicoes = modelo.predict(gerador_validacao)
