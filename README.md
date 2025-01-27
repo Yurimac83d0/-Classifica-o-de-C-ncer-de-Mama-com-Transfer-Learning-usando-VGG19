@@ -29,3 +29,20 @@ modelo.fit(
 )
 modelo = load_model('modelo_cancer_mama_vgg19.keras')
 predicoes = modelo.predict(gerador_validacao)
+⚙️ Dependências
+As bibliotecas utilizadas incluem:
+
+tensorflow.keras para construção e treinamento do modelo.
+ImageDataGenerator para pré-processamento e aumento de dados.
+matplotlib e seaborn para visualização dos resultados.
+sklearn para cálculo de métricas e matriz de confusão.
+📊 Visualizações
+Gráficos de Métricas: Um gráfico de barras exibe as métricas precisão, recall e F1-Score para cada classe.
+
+Matriz de Confusão: Um mapa de calor exibe a matriz de confusão, mostrando a correspondência entre classes verdadeiras e preditas.
+
+🔑 Observações
+Performance: Certifique-se de ajustar o número de épocas e a taxa de aprendizado para otimizar os resultados.
+Classes: As classes devem ser nomeadas como câncer maligno, câncer benigno e normal.
+Diretórios: Verifique os caminhos das pastas do dataset antes de iniciar.
+
